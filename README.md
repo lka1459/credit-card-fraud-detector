@@ -32,15 +32,20 @@ Because fraud cases are rare, the dataset is highly imbalanced.
 
 - Loads and prepares transaction data
 - Splits the dataset into training and testing sets
-- Trains Logistic Regression and Random Forest models
+- Uses `Pipeline` to streamline preprocessing and model training
+- Applies SMOTE oversampling to address class imbalance
+- Trains and compares:
+  - Logistic Regression
+  - Random Forest Classifier
+  - XGBoost Classifier
 - Evaluates model performance using:
   - Accuracy
   - Precision
   - Recall
   - F1-score
   - Precision-Recall AUC
-- Displays a Precision-Recall curve to better understand model performance on fraud detection.
-
+- Displays a Precision-Recall curve to better understand model performance on fraud detection
+- Includes hyperparameter tuning using `RandomizedSearchCV`
 ## Technologies Used
 
 - Python
@@ -49,3 +54,4 @@ Because fraud cases are rare, the dataset is highly imbalanced.
 - scikit-learn
 - matplotlib
 - imbalanced-learn
+- XGBoost
