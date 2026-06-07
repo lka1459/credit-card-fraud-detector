@@ -6,10 +6,11 @@ This project was built to practise working with tabular classification data, esp
 
 ## Project Overview
 
-The project currently uses two machine learning models:
+The project currently uses three machine learning models:
 
 - Logistic Regression
 - Random Forest Classifier
+- XGB Booster Classifier
 
 The goal is to compare how different models perform when detecting fraud, while looking beyond accuracy and focusing on more useful metrics such as precision, recall, F1-score, and Precision-Recall AUC.
 
@@ -47,3 +48,4 @@ Because fraud cases are rare, the dataset is highly imbalanced.
 - NumPy
 - scikit-learn
 - matplotlib
+- imbalanced-learn
