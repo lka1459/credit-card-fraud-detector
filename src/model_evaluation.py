@@ -12,10 +12,10 @@ def model_evaluation(model: Pipeline, X_test: pd.DataFrame, y_test: pd.Series) -
     print(classification_report(y_test, y_pred))
 
     while True:
-        userChoice: str = input("Would you like to see the ROC evaluation? (y/n)")
+        userChoice: str = input("Would you like to see the Precision-Recall evaluation? (y/n)")
 
-        if userChoice == "y".lower():
-            precision, recall = precision_recall_curve(y_test, y_scores)
+        if userChoice.lower() == "y":
+            precision, recall, threshold = precision_recall_curve(y_test, y_scores)
             auc_score: float = auc(recall, precision)
 
             plt.figure(figsize=(8, 6))
@@ -28,7 +28,7 @@ def model_evaluation(model: Pipeline, X_test: pd.DataFrame, y_test: pd.Series) -
             print("\nEvaluation complete.")
             return 
         
-        elif userChoice == "n".lower():
+        elif userChoice.lower() == "n":
             print("\nEvaluation complete.")
             return 
         

@@ -7,6 +7,8 @@ from src.model_evaluation import model_evaluation
 
 def main() -> None:
     df: pd.DataFrame = pd.read_csv(r'data\creditcard.csv')
+    df.drop_duplicates(inplace=True)
+
     X: pd.DataFrame = df.drop(columns=["Class"])
     y: pd.Series = df['Class']
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
