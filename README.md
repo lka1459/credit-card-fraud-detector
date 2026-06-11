@@ -2,31 +2,31 @@
 
 A machine learning classification project that detects whether a credit card transaction is fraudulent or legitimate.
 
-This project was built to practise working with tabular classification data, especially imbalanced datasets where fraudulent transactions are much less common than normal transactions.
+This project was built to practise working with tabular classification data, particularly imbalanced datasets where fraudulent transactions are significantly less common than legitimate transactions.
 
 ## Project Overview
 
-The project currently uses three machine learning models:
+The project compares three machine learning models:
 
 - Logistic Regression
 - Random Forest Classifier
-- XGB Booster Classifier
+- XGBoost Classifier
 
-The goal is to compare how different models perform when detecting fraud, while looking beyond accuracy and focusing on more useful metrics such as precision, recall, F1-score, and Precision-Recall AUC.
+The objective is to evaluate how different models perform when detecting fraudulent transactions while focusing on metrics that are more meaningful for imbalanced datasets, including precision, recall, F1-score, and Precision-Recall AUC.
 
 ## Dataset
 
-The dataset used in this project was taken from Kaggle:
+The dataset used in this project was obtained from Kaggle:
 
 **Credit Card Fraud Detection**  
 Source: https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
 
-The dataset contains credit card transaction data, where each transaction is labelled as either:
+The dataset contains credit card transaction records, where each transaction is labelled as either:
 
-- `0` = legitimate transaction
-- `1` = fraudulent transaction
+- `0` = Legitimate transaction
+- `1` = Fraudulent transaction
 
-Because fraud cases are rare, the dataset is highly imbalanced.
+Due to the small number of fraudulent transactions, the dataset is highly imbalanced.
 
 ## Features
 
@@ -44,14 +44,15 @@ Because fraud cases are rare, the dataset is highly imbalanced.
   - Recall
   - F1-score
   - Precision-Recall AUC
-- Displays a Precision-Recall curve to better understand model performance on fraud detection
-- Includes hyperparameter tuning using `RandomizedSearchCV`
+- Generates Precision-Recall curves for model comparison
+- Compares model performance on an imbalanced classification problem
+
 ## Technologies Used
 
 - Python
 - pandas
 - NumPy
 - scikit-learn
-- matplotlib
 - imbalanced-learn
 - XGBoost
+- matplotlib
